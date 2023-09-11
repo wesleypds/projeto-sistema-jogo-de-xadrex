@@ -1,7 +1,10 @@
 package app;
 
+import xadrez.PartidaXadrez;
+
 public class App {
     public static void main(String[] args) {
-        System.out.println("Hello word");
+        PartidaXadrez partidaXadrez = new PartidaXadrez();
+        UI.printTabuleiro(partidaXadrez.getPecas());
     }
 }
