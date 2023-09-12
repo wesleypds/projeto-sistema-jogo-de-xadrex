@@ -5,7 +5,7 @@ public class Tabuleiro {
     private Integer colunas;
     private Peca[][] pecas;
 
-    public Tabuleiro(Integer linhas, Integer colunas) {
+    public Tabuleiro(int linhas, int colunas) {
         if (linhas < 1 || colunas < 1) {
             throw new TabuleiroExcecao("Erro na criação do tabuleiro: É preciso que tenha pelo menos 1 linha e 1 coluna");
         }
@@ -22,7 +22,7 @@ public class Tabuleiro {
         return colunas;
     }
 
-    public Peca peca(Integer linha, Integer coluna) {
+    public Peca peca(int linha, int coluna) {
         if (Boolean.FALSE.equals(existePosicao(linha, coluna))) {
             throw new TabuleiroExcecao("Erro: Esta posição não existe");
         }
@@ -44,7 +44,7 @@ public class Tabuleiro {
         peca.posicao = posicao;
     }
 
-    public Boolean existePosicao(Integer linha, Integer coluna) {
+    public Boolean existePosicao(int linha, int coluna) {
         return linha >= 0 && linha < linhas && coluna >= 0 && coluna < colunas;
     }
 

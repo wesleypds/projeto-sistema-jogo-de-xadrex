@@ -7,7 +7,7 @@ public class Posicao {
     public Posicao() {
     }
 
-    public Posicao(Integer linha, Integer coluna) {
+    public Posicao(int linha, int coluna) {
         this.linha = linha;
         this.coluna = coluna;
     }
@@ -16,7 +16,7 @@ public class Posicao {
         return linha;
     }
 
-    public void setLinha(Integer linha) {
+    public void setLinha(int linha) {
         this.linha = linha;
     }
 
@@ -24,7 +24,7 @@ public class Posicao {
         return coluna;
     }
 
-    public void setColuna(Integer coluna) {
+    public void setColuna(int coluna) {
         this.coluna = coluna;
     }
 
