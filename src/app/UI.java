@@ -1,7 +1,11 @@
 package app;
 
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 import xadrez.Cor;
 import xadrez.PecaXadrez;
+import xadrez.PosicaoXadrez;
 
 public class UI {
 
@@ -50,5 +54,16 @@ public class UI {
             }
         }
         System.out.print(" ");
+    }
+
+    public static PosicaoXadrez lerPosicaoXadrez(Scanner sc) {
+        try {
+            String s = sc.nextLine();
+            char coluna = s.charAt(0);
+            int linha = Integer.parseInt(s.substring(1));
+            return new PosicaoXadrez(coluna, linha);
+        } catch (RuntimeException e) {
+            throw new InputMismatchException("Erro ao ler PosicaoXadrez. Os valores válidos são de a1 à h8");
+        }
     }
 }

@@ -58,4 +58,17 @@ public class Tabuleiro {
         }
         return peca(posicao) != null;
     }
+
+    public Peca removePeca(Posicao posicao) {
+        if (Boolean.FALSE.equals(existePosicao(posicao))) {
+            throw new TabuleiroExcecao("Erro: Esta posição não existe");
+        }
+        if (peca(posicao) == null) {
+            return null;
+        }
+        Peca aux = peca(posicao);
+        aux.posicao = null;
+        pecas[posicao.getLinha()][posicao.getColuna()] = null;
+        return aux;
+    }
 }
