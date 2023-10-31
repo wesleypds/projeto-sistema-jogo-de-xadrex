@@ -1,6 +1,6 @@
-package xadrez;
+package xadrez.excecoes;
 
-import tabuleiro.TabuleiroExcecao;
+import tabuleiro.excecoes.TabuleiroExcecao;
 
 public class XadrezExcecao extends TabuleiroExcecao {
     public XadrezExcecao(String msg) {

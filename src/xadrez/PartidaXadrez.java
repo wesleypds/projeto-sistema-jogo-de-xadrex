@@ -3,6 +3,7 @@ package xadrez;
 import tabuleiro.Peca;
 import tabuleiro.Posicao;
 import tabuleiro.Tabuleiro;
+import xadrez.excecoes.XadrezExcecao;
 import xadrez.pecas.Rei;
 import xadrez.pecas.Torre;
 
@@ -44,7 +45,7 @@ public class PartidaXadrez {
     }
 
     private void validaPosicaoOrigem(Posicao posicao) {
-        if (Boolean.FALSE.equals(tabuleiro.existePosicao(posicao))) {
+        if (Boolean.FALSE.equals(tabuleiro.existePeca(posicao))) {
             throw new XadrezExcecao("Não existe peça na posição de origem");
         }
     }

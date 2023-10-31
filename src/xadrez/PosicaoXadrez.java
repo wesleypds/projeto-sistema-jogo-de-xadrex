@@ -1,6 +1,7 @@
 package xadrez;
 
 import tabuleiro.Posicao;
+import xadrez.excecoes.XadrezExcecao;
 
 public class PosicaoXadrez {
     private Character coluna;

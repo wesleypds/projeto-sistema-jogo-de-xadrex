@@ -1,5 +1,7 @@
 package tabuleiro;
 
+import tabuleiro.excecoes.TabuleiroExcecao;
+
 public class Tabuleiro {
     private Integer linhas;
     private Integer colunas;
